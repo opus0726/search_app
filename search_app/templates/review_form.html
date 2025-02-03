@@ -1,0 +1,11 @@
+{% load static %}
+
+  <form method="post" class="p-4 m-4 bg-light border border-success rounded form-group">
+    {% csrf_token %}
+    <label>対象書籍</label>
+    <input class="form-control" value="{{ book.title }}" readonly>
+    <label>本文</label>
+    <textarea class="form-control" name="text" rows="3"></textarea>
+    <input type="hidden" name="book" value="{{ book.id }}">
+    <button type="submit" class="btn btn-success mt-4">投稿する</button>
+  </form>

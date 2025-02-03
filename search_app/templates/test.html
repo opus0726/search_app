@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商品一覧</title>
+</head>
+<body>
+    <p>検索結果 {{ hit_count }} 件</p>
+    <ul>
+    {% for item in results %}
+        <li>
+            <a href="{% url 'detail' item.code %}">
+                <img src="{{ item.images.0 }}">
+                {{ item.name }}
+                ￥{{ item.price }}
+                {{ item.reviewAverage }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+    
+</body>
+</html>
+{% endblock %}

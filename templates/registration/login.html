@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="login-h1">ログイン</h1>
+  <form method="post" class="p-4 m-4 bg-light border border-success rounded form-group login-form">
+    {% csrf_token %}
+    {% for error in form.errors.values %}
+      {{ error }}
+    {% endfor %}
+    <input class="form-control" name="username" placeholder="ユーザー ID">
+    <input type="password" class="form-control" name="password" placeholder="パスワード">
+    <button type="submit" class="btn btn-success mt-4">ログインする</button>
+  </form>
+  <p class="qa">アカウントをお持ちでない場合は</p>
+  <a class="nav-link mx-3 slchange" href="{% url 'accounts:signup' %}">新規登録</a>
+{% endblock %}

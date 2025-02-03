@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="p-4 m-4 bg-light border border-success rounded information">
+    <div>
+    </div>
+    <div class="com">
+      <div class="border p-4 mb-2" id="coment">
+        {% for review in object.review_set.all %}
+          <div class="chat">
+            <h3 class="h4">{{ review.title }}</h3>
+            <div class="px-2">
+              <span>(投稿ユーザー： {{ review.user.username }})</span>
+              <p>{{ review.text }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <script>
+        let target = document.getElementById('coment');
+        target.scrollIntoView(false);
+      </script>
+      <div class="post">
+        <form action="{% url 'review' object.pk%}" method="post" class="p-4 m-4 bg-light border border-success rounded form-group postform-group saerch_form">
+          {% csrf_token %}
+          <textarea class="form-control postform" name="text" rows="3" placeholder="コメントする..."></textarea>
+          <input type="hidden" name="book" value="{{ book.id }}">
+          {{ form }}
+          <button type="submit" class="btn btn-success mt-4 postbtn">送信</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

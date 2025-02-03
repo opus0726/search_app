@@ -1,0 +1,205 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #151515;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.form-control {
+    width: 302px;
+    height: 60px;
+    text-align: left;
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 14px;
+    padding-top: 4px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.form-control::placeholder{
+    color: #B5B4B4;
+}
+
+.form-control, .btn-success {
+    display:flex;
+    flex-flow: column;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.text-success {
+    font-size: 26px;
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-size: 30px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    background-color: #D9D9D9;
+    border-radius: 60px;
+    margin-left: 20px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.saerch {
+    margin-left: 50%;
+    margin-right: 30px;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saerch_form {
+    border-radius: 40px;
+}
+
+.ivent {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.img-thumbnail {
+    width: 246px;
+    height: 138px;
+    border-radius: 10px;
+    margin-right: 24px;
+}
+
+.ivent_inform {
+    width: 400px;
+    text-align: left;
+}
+
+.ivent_inform h1 {
+    margin-bottom: 8px;
+}
+
+.moth {
+    margin-bottom: 48px;
+}
+
+.moths {
+    margin-bottom: 22px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;/* 縦位置の調整 */
+    justify-content: center;
+  }
+  
+  .moths::before,
+  .moths::after {
+    content: '';
+    flex-grow: 0.4;/* 余白を分け与える */
+    height: 2px;
+    background: #707070;
+  }
+
+  .moths::before {
+    margin-right: 10px;
+  }
+  
+  .moths::after {
+    margin-left: 10px;
+  }
+
+a {
+    text-decoration: none;
+}
+
+.signup-h1 ,.login-h1{
+    margin-top: 10%;
+    margin-bottom: 40px;
+}
+
+.signup-form ,.login-form{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-success{
+    width: 236px;
+    height: 42px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 22px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-success:hover{
+    background-color: #D9D9D9;
+}
+
+.qa{
+    margin-top: 60px;
+    margin-bottom: 6px;
+}
+
+.slchange{
+    color: #00F0FF;
+    text-decoration: none;
+}
+
+.slchange:hover{
+    text-decoration: underline;
+}
+
+.information {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 0 auto;
+}
+
+.com {
+    width: 288px;
+    height: 30rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8rem;
+    overflow-y: scroll;
+}
+
+.post {
+    position: fixed;
+    bottom: 20px;
+    
+}
+
+.postbtn {
+    margin: 0 auto;
+}
