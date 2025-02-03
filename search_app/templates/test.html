@@ -11,7 +11,7 @@
     <ul>
     {% for item in results %}
         <li>
-            <a href="{% url 'detail' item.code %}">
+            <a href="{{ item.url }}">
                 <img src="{{ item.images.0 }}">
                 {{ item.name }}
                 ￥{{ item.price }}
